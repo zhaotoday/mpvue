@@ -1,24 +1,20 @@
-// https://vuex.vuejs.org/zh-cn/intro.html
-// make sure to call Vue.use(Vuex) if using a module system
 import Vue from 'vue'
 import Vuex from 'vuex'
+import getters from './getters'
+import actions from './actions'
+import mutations from './mutations'
+import articles from './modules/articles'
+import categories from './modules/categories'
 
 Vue.use(Vuex)
 
-const store = new Vuex.Store({
-  state: {
-    count: 0
-  },
-  mutations: {
-    increment: (state) => {
-      const obj = state
-      obj.count += 1
-    },
-    decrement: (state) => {
-      const obj = state
-      obj.count -= 1
-    }
+export default new Vuex.Store({
+  state: {},
+  getters,
+  actions,
+  mutations,
+  modules: {
+    articles,
+    categories
   }
 })
-
-export default store

@@ -1,0 +1,81 @@
+@import "../../../utils/index";
+
+@include c(tabs) {
+  @include e(tabs) {
+    display: flex;
+    background-color: map-get($colors, c1);
+  }
+
+  @include e(tab) {
+    @include text--middle(px2rem(64px));
+
+    flex: 1;
+    background: {
+      position: center center;
+      repeat: no-repeat;
+    }
+
+    &.is-active {
+      background-color: map-get($colors, c4);
+    }
+
+    @include m(chinese-foods) {
+      background: {
+        image: url("./images/chinese-foods.png");
+        size: px2rem(34px) px2rem(36px);
+      }
+    }
+
+    @include m(persons) {
+      background: {
+        image: url("./images/persons.png");
+        size: px2rem(53px) px2rem(40px);
+      }
+    }
+
+    @include m(scenes) {
+      background: {
+        image: url("./images/scenes.png");
+        size: px2rem(37px) px2rem(36px);
+      }
+    }
+
+    @include m(western-foods) {
+      background: {
+        image: url("./images/western-foods.png");
+        size: px2rem(48px) px2rem(25px);
+      }
+    }
+
+    @include m(properties) {
+      background: {
+        image: url("./images/properties.png");
+        size: px2rem(30px) px2rem(36px);
+      }
+    }
+
+    @include m(close) {
+      background: {
+        image: url("./images/close.png");
+        size: px2rem(32px) px2rem(17px);
+      }
+    }
+
+    @include m(open) {
+      transform: rotateX(180deg);
+
+      background: {
+        image: url("./images/close.png");
+        size: px2rem(32px) px2rem(17px);
+      }
+    }
+  }
+
+  @include e(content) {
+    @include size(100%, px2rem(428px));
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: map-get($colors, c4);
+  }
+}

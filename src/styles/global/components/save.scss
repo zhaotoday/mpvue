@@ -1,0 +1,19 @@
+@import "../../utils/index";
+
+@include c(save) {
+  @include size(100%, px2rem(200px));
+
+  background-color: map-get($colors, c1);
+  text-align: center;
+  z-index: map-get($z-indexes, c-save);
+
+  @include e(tip) {
+    @include padding(px2rem(22px), null, px2rem(22px));
+
+    line-height: 100%;
+  }
+
+  @include e(button) {
+    @include block--center;
+  }
+}

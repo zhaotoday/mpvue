@@ -1,0 +1,9 @@
+@import "../../utils/index";
+
+@include c(overlay) {
+  @include position--fixed(0, 0, 0, 0);
+
+  background-color: map-get($colors, c2);
+  opacity: .6;
+  z-index: map-get($z-indexes, c-overlay);
+}

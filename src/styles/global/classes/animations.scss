@@ -1,0 +1,30 @@
+@keyframes animation1 {
+  from,
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+}
+
+.animation1 {
+  animation-name: animation1;
+}
+
+@keyframes animation2 {
+  from,
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -15px, 0);
+  }
+}
+
+.animation2 {
+  animation-name: animation2;
+  transform-origin: center bottom;
+}

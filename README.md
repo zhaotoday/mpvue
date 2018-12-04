@@ -5,6 +5,7 @@
 - [mpVue](http://mpvue.com)
 - [awesome-mpvue](https://github.com/mpvue/awesome-mpvue)
 - [Flyio](https://wendux.github.io/dist/#/doc/flyio/readme)
+- [mpvue-entry](https://github.com/F-loat/mpvue-entry)
 - [mpvue中无缝接入Vant Weapp组件库](https://github.com/Rychou/mpvue-vant)
 
 ## 命令

@@ -1,54 +1,14 @@
-// 页面最小宽度
-$min-width: 1200px;
-
-// 头部高度
-$header-height: 64px;
-
-// 侧边栏宽度
-$sidebar-width: 240px;
-
 // 字体大小
 $font-sizes: (
-  fs10: 10px,
-  fs11: 11px,
-  fs12: 12px,
-  fs13: 13px,
-  fs14: 14px,
-  fs15: 15px,
-  fs16: 16px,
-  fs20: 20px,
-  fs70: 70px
+  fs10: 10px
 );
 
 // 颜色
 $colors: (
-  c1: #fff,
-  c2: #000,
-  c3: #090E08,
-  c4: #F7F7F7,
-  c5: #e1e1e1,
-  c6: #9DCB56
+  c1: #fff
 );
 
 // z-index
 $z-indexes: (
-  c-element__bottom: -1,
-  c-element--properties-bag: 0,
-  c-element--properties-treadmill: 1,
-  c-element--properties-dumbbell: 1,
-  c-element--persons-boy: 1,
-  c-element--persons-girl: 1,
-  c-element--persons-boy-bike: 2,
-  c-element--persons-girl-bike: 2,
-  c-element: 2,
-  c-element--properties-desk: 2,
-
-  p-canvas-pb-element-tabs: 3,
-
-  c-overlay: 5,
-  c-alert: 6,
-  c-qrcode: 3,
-  c-save:3,
-  c-toast: 7,
-  c-share-tip: 7
+  c-overlay: 5
 );

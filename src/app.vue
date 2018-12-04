@@ -6,5 +6,5 @@ export default {
 
 <style
   lang="scss"
-  src="">
+  src="./styles/global/index.scss">
 </style>

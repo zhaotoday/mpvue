@@ -1,5 +1,0 @@
-@each $key, $value in $font-sizes {
-  %#{$key} {
-    font-size: px2rem($value * 2);
-  }
-}

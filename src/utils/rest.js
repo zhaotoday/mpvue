@@ -1,4 +1,5 @@
 import REST from 'jt-rest'
+import consts from './consts'
 import restHelpers from './helpers/rest-helpers'
 import wxb from './wxb'
 
@@ -34,8 +35,7 @@ export default class extends REST {
           wxb.hideLoading()
 
           if (res.response.data.error.code === 'AUTHORIZATION/UNAUTHORIZED') {
-            wxb.showToast({ title: '登入过期，请重新登入' })
-            window.location.href = 'index.html#/logout'
+            wxb.navigateTo({ url: consts.LOGIN_PAGE })
           } else {
             wxb.showToast({ title: res.response.data.error.message })
           }

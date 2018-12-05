@@ -2,7 +2,7 @@
   <div class="p-login bgc1">
     <div class="pb-logo">
       <div class="c-icon c-icon--logo"></div>
-      <div class="pb-logo__title fs36 fwb">重阳养老</div>
+      <div class="pb-logo__title c2 fs36 fwb">重阳养老</div>
     </div>
     <p class="pb-tip c4 fs27">
       您暂未获取微信授权，将无法正常使用小程序的功能。如需要正常使用，请点击“授权登录”按钮，打开头像，昵称等信息的授权。
@@ -23,15 +23,15 @@ export default {
   methods: {
     async handleGetUserInfo (e) {
       const { userInfo, iv, encryptedData } = e.mp.detail
-      const loginRes = await this.$bridge.login()
-      const getSettingRes = await this.$bridge.getSetting()
+      const loginRes = await this.$wx.login()
+      const getSettingRes = await this.$wx.getSetting()
 
       if (!getSettingRes.authSetting['scope.userInfo']) {
-        this.$bridge.showToast({ title: '您需要授权登录才能进行下一步操作' })
+        this.$wx.showToast({ title: '您需要授权登录才能进行下一步操作' })
       } else {
         try {
           console.log(1)
-          const siginRes = await this.$bridge.request({
+          const siginRes = await this.$wx.request({
             requiresAuth: false,
             method: 'POST',
             url: 'signin/weixin',
@@ -57,9 +57,9 @@ export default {
         const url = '/' + utils.url.decode(this.$mp.query.from)
 
         try {
-          await this.$bridge.navigateTo({ url })
+          await this.$wx.navigateTo({ url })
         } catch (e) {
-          await this.$bridge.switchTab({ url })
+          await this.$wx.switchTab({ url })
         }
       }
     }

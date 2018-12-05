@@ -1,4 +1,33 @@
-@import "../../styles/utils/index";
+@import '../../styles/utils/index';
 
 @include p(login) {
+  background-color: map-get($colors, c1);
+  text-align: center;
+  height: 100%;
+
+  @include pb(logo) {
+    @include padding(px2rpx(150px), null, px2rpx(123px));
+
+    line-height: 100%;
+
+    @include c(icon) {
+      @include m(logo) {
+        margin-bottom: px2rpx(30px);
+      }
+    }
+
+    @include e(title) {
+      font-weight: bold;
+      line-height: 100%;
+    }
+  }
+
+  @include pb(tip) {
+    @include block--center;
+
+    padding-bottom: px2rpx(100px);
+    line-height: map-get($font-sizes, f44);
+    width: px2rpx(600px);
+    text-align: left;
+  }
 }

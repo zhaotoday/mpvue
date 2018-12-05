@@ -10,5 +10,5 @@ export default {}
 
 <style
   lang="scss"
-  src="./styles/index.scss">
+  src="./styles.scss">
 </style>

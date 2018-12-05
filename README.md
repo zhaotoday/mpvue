@@ -1,4 +1,4 @@
-# 基于 mpVue 开发微信小程序
+# 基于 mpVue 开发小程序
 
 ## 链接
 
@@ -7,6 +7,7 @@
 - [Flyio](https://wendux.github.io/dist/#/doc/flyio/readme)
 - [mpvue-entry](https://github.com/F-loat/mpvue-entry)
 - [mpvue中无缝接入Vant Weapp组件库](https://github.com/Rychou/mpvue-vant)
+- [mini-program](https://github.com/zhaotoday/mini-program)
 
 ## 命令
 

@@ -1,6 +1,6 @@
+import wxb from 'wx-bridge'
 import consts from './consts'
 import helpers from './helpers/base'
-import wxb from 'wx-bridge'
 import auth from './auth'
 
 const navigateInterceptor = {

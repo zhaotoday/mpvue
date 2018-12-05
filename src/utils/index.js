@@ -1,6 +1,6 @@
-import helpers from '../helpers/base'
 import wxb from 'wx-bridge'
-import auth from '../auth'
+import helpers from './helpers/base'
+import auth from './auth'
 
 const navigateInterceptor = {
   async beforeCall (options) {

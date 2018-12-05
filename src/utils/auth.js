@@ -1,4 +1,4 @@
-import wxb from 'wx-bridge'
+import wxb from './wxb'
 
 const USER = 'user'
 const TOKEN = 'token'

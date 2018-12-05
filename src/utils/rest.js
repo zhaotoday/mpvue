@@ -1,6 +1,6 @@
 import REST from 'jt-rest'
-import iView from 'iview'
 import restHelpers from './helpers/rest-helpers'
+import wxb from './wxb'
 
 export default class extends REST {
   /**
@@ -21,23 +21,23 @@ export default class extends REST {
       options.query._ = new Date().getTime()
     }
 
-    iView.Spin.show()
+    wxb.showLoading()
 
     return new Promise(resolve => {
       super.request(method, options)
         .then(res => {
-          iView.Spin.hide()
+          wxb.hideLoading()
           // 在这里可对 res 进行包装
           resolve(res.data)
         })
         .catch(res => {
-          iView.Spin.hide()
+          wxb.hideLoading()
 
           if (res.response.data.error.code === 'AUTHORIZATION/UNAUTHORIZED') {
-            iView.Message.error('登入过期，请重新登入')
+            wxb.showToast({ title: '登入过期，请重新登入' })
             window.location.href = 'index.html#/logout'
           } else {
-            iView.Message.error(res.response.data.error.message)
+            wxb.showToast({ title: res.response.data.error.message })
           }
         })
     })

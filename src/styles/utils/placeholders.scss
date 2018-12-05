@@ -2,4 +2,8 @@
   %#{$key} {
     font-size: px2rpx($value);
   }
+
+  %lh#{$key} {
+    line-height: px2rpx($value);
+  }
 }

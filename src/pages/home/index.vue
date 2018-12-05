@@ -12,7 +12,7 @@ export default {
   components: {
     Card
   },
-  async created () {
+  async onShow () {
     this.$wx.showToast({ title: '吐司' })
 
     await this.$helpers.sleep(2000)

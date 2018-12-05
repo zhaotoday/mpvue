@@ -6,12 +6,21 @@ $cdn-version: 0.1;
 
 // 字体大小
 $font-sizes: (
-  fs10: 10px
+  fs10: 10px,
+  fs20: 20px,
+  fs27: 27px,
+  fs30: 30px,
+  fs32: 32px,
+  fs36: 36px,
+  fs44: 44px
 );
 
 // 颜色
 $colors: (
-  c1: #fff
+  c1: #fff,
+  c2: #000,
+  c3: #39bab8,
+  c4: #999999
 );
 
 // z-index

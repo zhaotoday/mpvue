@@ -3,9 +3,6 @@ import wxb from 'wx-bridge'
 import auth from '../auth'
 
 const navigateInterceptor = {
-  req (options) {
-    options.requiresLogin = false
-  },
   async beforeCall (options) {
     if (options.requiresLogin && !auth.loggedIn()) {
       options.url = '/pages/login/index'

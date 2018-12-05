@@ -1,6 +1,6 @@
 <template>
-  <div class="p-login">
-    login
+  <div class="p-share">
+    share
   </div>
 </template>
 

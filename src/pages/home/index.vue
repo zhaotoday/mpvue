@@ -12,8 +12,15 @@ export default {
   components: {
     Card
   },
-  created () {
+  async created () {
     this.$wx.showToast({ title: '吐司' })
+
+    await this.$helpers.sleep(2000)
+
+    this.$wx.navigateTo({
+      requiresLogin: true,
+      url: '/pages/share/index'
+    })
   }
 }
 </script>

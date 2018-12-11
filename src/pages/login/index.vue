@@ -20,10 +20,15 @@
 import { utils } from 'mp-client'
 
 export default {
+  onShow () {
+    this.$wx.getUserInfo()
+  },
   methods: {
     async handleGetUserInfo (e) {
       const { userInfo, iv, encryptedData } = e.mp.detail
-      const loginRes = await this.$wx.login()
+      const loginRes = await this.$wx.login({
+        withCredentials: true
+      })
       const getSettingRes = await this.$wx.getSetting()
 
       if (!getSettingRes.authSetting['scope.userInfo']) {
@@ -33,8 +38,8 @@ export default {
           console.log(1)
           const siginRes = await this.$wx.request({
             requiresAuth: false,
-            method: 'POST',
-            url: 'signin/weixin',
+            method: 'GET',
+            url: 'http://localhost:3002/test',
             dataType: 'json',
             data: {
               code: loginRes.code,

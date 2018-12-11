@@ -28,16 +28,19 @@ export default class extends REST {
       super.request(method, options)
         .then(res => {
           wxb.hideLoading()
+
           // 在这里可对 res 进行包装
           resolve(res.data)
         })
         .catch(res => {
           wxb.hideLoading()
 
-          if (res.response.data.error.code === 'AUTHORIZATION/UNAUTHORIZED') {
+          if (res.statusCode === 500) {
+            wxb.showToast({ title: '服务器出错' })
+          } else if (res.data.error.code === 'AUTHORIZATION/UNAUTHORIZED') {
             wxb.navigateTo({ url: consts.LOGIN_PAGE })
           } else {
-            wxb.showToast({ title: res.response.data.error.message })
+            wxb.showToast({ title: res.data.error.message })
           }
         })
     })

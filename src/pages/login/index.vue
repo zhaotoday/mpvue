@@ -20,61 +20,33 @@
 import { utils } from 'mp-client'
 
 export default {
-  onShow () {
-    this.$wx.getUserInfo()
-  },
   methods: {
     async handleGetUserInfo (e) {
-      const { userInfo, iv, encryptedData } = e.mp.detail
+      const { iv, encryptedData } = e.mp.detail
+      const getSettingRes = await this.$wx.getSetting()
       const loginRes = await this.$wx.login({
         withCredentials: true
       })
-      const getSettingRes = await this.$wx.getSetting()
 
       if (!getSettingRes.authSetting['scope.userInfo']) {
         this.$wx.showToast({ title: '您需要授权登录才能进行下一步操作' })
       } else {
-        try {
-          console.log(1)
-
-          const wxUsersPostActionRes = await this.$store.dispatch('wxUsers/postAction', {
-            body: {
-              type: 'LOGIN',
-              code: loginRes.code,
-              iv,
-              encryptedData,
-              loginRes
-            }
-          })
-
-          console.log(wxUsersPostActionRes, userInfo, iv, encryptedData, loginRes)
-
-          /*
-          const siginRes = await this.$wx.request({
-            requiresAuth: false,
-            method: 'GET',
-            url: 'http://localhost:3002/test',
-            dataType: 'json',
-            data: {
-              code: loginRes.code,
-              user: userInfo,
-              iv,
-              encryptedData
-            }
-          })
-          console.log(siginRes)
-
-          if (siginRes.data.code === 0) {
-            this.$auth.login({
-              user: userInfo,
-              token: siginRes.data.data[0].token
-            })
+        const wxUsersPostActionRes = await this.$store.dispatch('wxUsers/postAction', {
+          body: {
+            type: 'LOGIN',
+            code: loginRes.code,
+            iv,
+            encryptedData,
+            loginRes
           }
-          */
-        } catch (e) {
-          console.log(222, e)
-        }
-        const url = '/' + utils.url.decode(this.$mp.query.from)
+        })
+
+        const { wxUser, token } = wxUsersPostActionRes.data
+        const url = this.$mp.query.from
+          ? '/' + utils.url.decode(this.$mp.query.from)
+          : '/pages/home/index'
+
+        this.$auth.login({ user: wxUser, token })
 
         try {
           await this.$wx.navigateTo({ url })

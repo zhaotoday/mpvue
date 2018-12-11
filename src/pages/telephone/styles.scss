@@ -1,4 +1,6 @@
-@import "../../styles/utils/index";
+@import '../../styles/utils/index';
 
 @include p(telephone) {
+  @include pb(tip) {
+  }
 }

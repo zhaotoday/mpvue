@@ -48,12 +48,7 @@ export default {
           : '/pages/home/index'
 
         this.$auth.login({ user: wxUser, token })
-
-        try {
-          await this.$wx.navigateTo({ url })
-        } catch (e) {
-          await this.$wx.switchTab({ url })
-        }
+        this.$wx.navigateTo({ url })
       }
     }
   }

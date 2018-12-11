@@ -1,5 +1,5 @@
 import types from './types'
-import Model from '@/models/articles'
+import Model from '@/models/wxUsers'
 
 export default {
   async getList ({ commit }, { query }) {
@@ -22,15 +22,15 @@ export default {
     return res.data
   },
 
-  async post ({ commit }, { body }) {
+  post ({ commit }, { body }) {
     return new Model().POST({ body })
   },
 
-  async put ({ commit }, { id, body }) {
+  put ({ commit }, { id, body }) {
     return new Model().PUT({ id, body })
   },
 
-  async del ({ commit }, { id }) {
+  del ({ commit }, { id }) {
     return new Model().DELETE({ id })
   },
 

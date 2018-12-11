@@ -36,6 +36,20 @@ export default {
       } else {
         try {
           console.log(1)
+
+          const wxUsersPostActionRes = await this.$store.dispatch('wxUsers/postAction', {
+            body: {
+              type: 'LOGIN',
+              code: loginRes.code,
+              iv,
+              encryptedData,
+              loginRes
+            }
+          })
+
+          console.log(wxUsersPostActionRes, userInfo, iv, encryptedData, loginRes)
+
+          /*
           const siginRes = await this.$wx.request({
             requiresAuth: false,
             method: 'GET',
@@ -56,6 +70,7 @@ export default {
               token: siginRes.data.data[0].token
             })
           }
+          */
         } catch (e) {
           console.log(222, e)
         }

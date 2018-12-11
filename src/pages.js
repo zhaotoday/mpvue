@@ -1,5 +1,17 @@
 module.exports = [
   {
+    path: 'pages/telephone/index',
+    config: {
+      navigationBarTitleText: '绑定手机号'
+    }
+  },
+  {
+    path: 'pages/my/index',
+    config: {
+      navigationBarTitleText: '会员中心'
+    }
+  },
+  {
     path: 'pages/login/index',
     config: {
       navigationBarTitleText: '登录'

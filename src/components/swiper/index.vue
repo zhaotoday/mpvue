@@ -12,11 +12,7 @@
         <image
           class="c-swiper__image"
           mode="aspectFill"
-          :src="item.thumb" />
-        <div class="c-swiper__titles c1">
-          <div class="c-swiper__title f40">{{ item.title }}</div>
-          <div class="c-swiper__subtitle f30">{{ item.subtitle }}</div>
-        </div>
+          :src="item" />
       </swiper-item>
     </swiper>
     <div class="cc-indicator">

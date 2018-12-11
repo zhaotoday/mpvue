@@ -1,5 +1,11 @@
 module.exports = [
   {
+    path: 'pages/login/index',
+    config: {
+      navigationBarTitleText: '登录'
+    }
+  },
+  {
     path: 'pages/home/index',
     config: {
       navigationBarTitleText: '首页'
@@ -15,12 +21,6 @@ module.exports = [
     path: 'pages/my/index',
     config: {
       navigationBarTitleText: '会员中心'
-    }
-  },
-  {
-    path: 'pages/login/index',
-    config: {
-      navigationBarTitleText: '登录'
     }
   },
   {

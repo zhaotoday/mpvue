@@ -1,4 +1,9 @@
 @import "../../styles/utils/index";
 
 @include p(home) {
+  @include pb(intro) {
+  }
+
+  @include pb(point-guide) {
+  }
 }

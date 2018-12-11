@@ -3,16 +3,6 @@
 @include p(login) {
   text-align: center;
 
-  @include pb(logo) {
-    @include padding(px2rpx(150px), null, px2rpx(123px));
-
-    @include c(icon) {
-      @include m(logo) {
-        margin-bottom: px2rpx(30px);
-      }
-    }
-  }
-
   @include pb(tip) {
     @include block--center;
     @extend %lhfs44;

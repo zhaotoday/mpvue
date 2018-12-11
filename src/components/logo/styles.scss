@@ -1,0 +1,13 @@
+@import "../../styles/utils/index";
+
+@include c(logo) {
+  @include padding(px2rpx(150px), null, px2rpx(123px));
+
+  text-align: center;
+
+  @include c(icon) {
+    @include m(logo) {
+      margin-bottom: px2rpx(30px);
+    }
+  }
+}

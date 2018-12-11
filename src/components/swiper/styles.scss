@@ -7,17 +7,6 @@
     @include size(100%, px2rpx(350px));
   }
 
-  @include e(titles) {
-    @include position--absolute(px2rpx(127px), null, null, px2rpx(60px));
-
-    line-height: 100%;
-  }
-
-  @include e(title) {
-    font-weight: bold;
-    padding-bottom: px2rpx(20px);
-  }
-
   @include cc(indicator) {
     @include position--absolute(null, null, px2rpx(20px), 0);
 

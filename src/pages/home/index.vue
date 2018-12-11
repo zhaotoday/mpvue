@@ -1,20 +1,35 @@
 <template>
   <div class="p-index">
-    <button
-      class="c-button c-button--2"
-      open-type="share">
-      推荐给好友
-    </button>
-    <CSwiper :items="[]" />
+    <CSwiper :items="cSwiper.items" />
+    <div class="pb-intro">
+      <rich-text>
+        dfdsf <br>范德萨范德萨
+      </rich-text>
+    </div>
+    <div class="pb-point-guide">积分规则</div>
+    <CToolBar />
   </div>
 </template>
 
 <script>
 import CSwiper from '@/components/swiper'
+import CToolBar from '@/components/tool-bar'
 
 export default {
   components: {
-    CSwiper
+    CSwiper,
+    CToolBar
+  },
+  data () {
+    return {
+      cSwiper: {
+        items: [
+          'https://cyyl.lrcdn.cn/files/2018-09-26/2a08dea0-c157-11e8-8171-b55e4434bc48.jpg',
+          'https://cyyl.lrcdn.cn/files/2018-08-10/b985be80-9caf-11e8-94ad-99efffc00aa5.jpg',
+          'https://cyyl.lrcdn.cn/files/2018-08-12/eaa24910-9d87-11e8-bde4-d997e4de5f27.jpg'
+        ]
+      }
+    }
   },
   async onShow () {
     /*
@@ -27,13 +42,6 @@ export default {
       url: '/pages/share/index'
     })
     */
-  },
-  onShareAppMessage () {
-    return {
-      title: '还差一个帮帮砍就可以免费参加这个测试啦。麻烦你帮我打开点击帮砍一下，不胜感激，谢谢老板！',
-      path: '/pages/ask-for/index/main',
-      imageUrl: `${this.$consts.CDN_URL}/pages/ask-for/index/share.png`
-    }
   }
 }
 </script>

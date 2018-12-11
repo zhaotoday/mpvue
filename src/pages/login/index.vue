@@ -1,9 +1,6 @@
 <template>
   <div class="p-login bgc1">
-    <div class="pb-logo">
-      <div class="c-icon c-icon--logo"></div>
-      <div class="pb-logo__title c2 fs36 fwb">重阳养老</div>
-    </div>
+    <CLogo />
     <p class="pb-tip c4 fs27">
       您暂未获取微信授权，将无法正常使用小程序的功能。如需要正常使用，请点击“授权登录”按钮，打开头像，昵称等信息的授权。
     </p>
@@ -18,8 +15,12 @@
 
 <script>
 import { utils } from 'mp-client'
+import CLogo from '@/components/logo'
 
 export default {
+  components: {
+    CLogo
+  },
   methods: {
     async handleGetUserInfo (e) {
       const { iv, encryptedData } = e.mp.detail

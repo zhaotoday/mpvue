@@ -2,21 +2,28 @@
   <div class="p-telephone bgc1">
     <CLogo />
     <p class="pb-tip c4 fs27">请绑定手机号，以便为您提供更好的服务。</p>
-    <input
-      class="c-input"
-      v-model.lazy="cForm.data.telephone" />
-    <input
-      class="c-input"
-      v-model.lazy="cForm.data.checkCode" />
-    <div
-      :class="[ 'c-check-code', { 'is-disabled': cCheckCode.disabled } ]"
-      @click="handleGetCheckCode">
-      {{ cCheckCode.message }}
+    <div class="c-input">
+      <input
+        type="number"
+        placeholder="请输入手机号"
+        maxlength="11"
+        v-model.lazy="cForm.data.telephone" />
+    </div>
+    <div class="c-input">
+      <input
+        type="number"
+        placeholder="请输入验证码"
+        maxlength="6"
+        v-model.lazy="cForm.data.checkCode" />
+      <div
+        :class="[ 'c-check-code', { 'is-disabled': cCheckCode.disabled } ]"
+        @click="handleGetCheckCode">
+        {{ cCheckCode.message }}
+      </div>
     </div>
     <button
       class="c-button c-button--1 bgc3 c1 fs32"
-      open-type="getUserInfo"
-      @getuserinfo="handleConfirm">
+      @click="handleConfirm">
       确定
     </button>
   </div>
@@ -36,7 +43,7 @@ export default {
       },
       cCheckCode: {
         disabled: false,
-        message: '获取短信验证码'
+        message: '获取验证码'
       }
     }
   },
@@ -74,7 +81,7 @@ export default {
           clearInterval(this.timer)
 
           this.cCheckCode.disabled = false
-          this.cCheckCode.message = '获取短信验证码'
+          this.cCheckCode.message = '获取验证码'
         }
       }, 1000)
     },
@@ -86,8 +93,18 @@ export default {
         return
       }
 
+      if (!/^1\d{2}\s?\d{4}\s?\d{4}$/.test(telephone)) {
+        this.$wx.showToast({ title: '手机号格式错误' })
+        return
+      }
+
       if (!checkCode) {
-        this.$wx.showToast({ title: '短信验证码不能为空' })
+        this.$wx.showToast({ title: '验证码不能为空' })
+        return
+      }
+
+      if (checkCode.length < 6) {
+        this.$wx.showToast({ title: '验证码格式错误' })
         return
       }
 

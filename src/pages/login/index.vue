@@ -41,7 +41,6 @@ export default {
             loginRes
           }
         })
-
         const { wxUser, token } = wxUsersPostActionRes.data
         const url = this.$mp.query.from
           ? '/' + utils.url.decode(this.$mp.query.from)

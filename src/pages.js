@@ -8,7 +8,7 @@ module.exports = [
   {
     path: 'pages/login/index',
     config: {
-      navigationBarTitleText: '登录'
+      navigationBarTitleText: '授权登录'
     }
   },
   {

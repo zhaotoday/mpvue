@@ -2,5 +2,37 @@
 
 @include p(telephone) {
   @include pb(tip) {
+    @include block--center;
+
+    text-align: center;
+    padding-bottom: px2rpx(40px);
+    width: px2rpx(640px);
+  }
+
+  @include pb(telephone-input, check-code-input) {
+    @include block--center;
+  }
+
+  @include pb(telephone-input) {
+    margin-bottom: px2rpx(20px);
+  }
+
+  @include pb(check-code-input) {
+    margin-bottom: px2rpx(60px);
+  }
+
+  @include pb(check-code) {
+    @include position--absolute(50%, 0);
+
+    line-height: 100%;
+    transform: translateY(-50%);
+    padding: px2rpx(20px);
+    text-align: right;
+    color: map-get($colors, c3);
+    z-index: 2;
+
+    &.is-disabled{
+      color: map-get($colors, c4);
+    }
   }
 }

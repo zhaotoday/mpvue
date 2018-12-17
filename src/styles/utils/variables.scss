@@ -9,7 +9,9 @@ $font-sizes: (
   fs10: 10px,
   fs20: 20px,
   fs24: 24px,
+  fs26: 26px,
   fs27: 27px,
+  fs28: 28px,
   fs30: 30px,
   fs32: 32px,
   fs34: 34px,
@@ -21,10 +23,11 @@ $font-sizes: (
 // 颜色
 $colors: (
   c1: #fff,
-  c2: #000,
+  c2: #333333,
   c3: #39bab8,
   c4: #999999,
-  c5: #F5F5F5
+  c5: #F5F5F5,
+  c6: #CCCCCC
 );
 
 // z-index

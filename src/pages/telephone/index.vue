@@ -1,22 +1,26 @@
 <template>
-  <div class="p-telephone bgc1">
+  <div class="p-telephone">
     <CLogo />
-    <p class="pb-tip c4 fs27">请绑定手机号，以便为您提供更好的服务。</p>
-    <div class="c-input">
+    <p class="pb-tip c4 fs24">请绑定手机号，以便为您提供更好的服务。</p>
+    <div class="pb-telephone-input c-input">
       <input
+        class="c2 fs28"
+        placeholder-class="c4"
         type="number"
         placeholder="请输入手机号"
         maxlength="11"
         v-model.lazy="cForm.data.telephone" />
     </div>
-    <div class="c-input">
+    <div class="pb-check-code-input c-input">
       <input
+        class="c2 fs28"
+        placeholder-class="c4"
         type="number"
         placeholder="请输入验证码"
         maxlength="6"
         v-model.lazy="cForm.data.checkCode" />
       <div
-        :class="[ 'c-check-code', { 'is-disabled': cCheckCode.disabled } ]"
+        :class="[ 'pb-check-code', 'fs28', { 'is-disabled': cCheckCode.disabled } ]"
         @click="handleGetCheckCode">
         {{ cCheckCode.message }}
       </div>

@@ -1,23 +1,25 @@
 <template>
-  <div class="p-telephone">
+  <scroll-view class="p-telephone">
     <CLogo />
     <p class="pb-tip c4 fs24">请绑定手机号，以便为您提供更好的服务。</p>
     <div class="pb-telephone-input c-input">
       <input
         class="c2 fs28"
-        placeholder-class="c4"
+        placeholder-class="c6"
         type="number"
         placeholder="请输入手机号"
         maxlength="11"
+        cursor-spacing="210rpx"
         v-model.lazy="cForm.data.telephone" />
     </div>
     <div class="pb-check-code-input c-input">
       <input
         class="c2 fs28"
-        placeholder-class="c4"
+        placeholder-class="c6"
         type="number"
         placeholder="请输入验证码"
         maxlength="6"
+        cursor-spacing="210rpx"
         v-model.lazy="cForm.data.checkCode" />
       <div
         :class="[ 'pb-check-code', 'fs28', { 'is-disabled': cCheckCode.disabled } ]"
@@ -30,7 +32,7 @@
       @click="handleConfirm">
       确定
     </button>
-  </div>
+  </scroll-view>
 </template>
 
 <script>
@@ -67,6 +69,11 @@ export default {
 
       if (!telephone) {
         this.$wx.showToast({ title: '手机号不能为空' })
+        return
+      }
+
+      if (!/^1\d{2}\s?\d{4}\s?\d{4}$/.test(telephone)) {
+        this.$wx.showToast({ title: '手机号格式错误' })
         return
       }
 

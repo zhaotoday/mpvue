@@ -8,17 +8,24 @@
     </div>
     <div class="pb-point-guide">积分规则</div>
     <CToolBar />
+    <CPopup
+      :visible="cPopup.visible"
+      @close="cPopup.visible = false">
+      <div slot="content">abc</div>
+    </CPopup>
   </div>
 </template>
 
 <script>
 import CSwiper from '@/components/swiper'
 import CToolBar from '@/components/tool-bar'
+import CPopup from '@/components/popup'
 
 export default {
   components: {
     CSwiper,
-    CToolBar
+    CToolBar,
+    CPopup
   },
   data () {
     return {
@@ -28,6 +35,9 @@ export default {
           'https://cyyl.lrcdn.cn/files/2018-08-10/b985be80-9caf-11e8-94ad-99efffc00aa5.jpg',
           'https://cyyl.lrcdn.cn/files/2018-08-12/eaa24910-9d87-11e8-bde4-d997e4de5f27.jpg'
         ]
+      },
+      cPopup: {
+        visible: true
       }
     }
   },

@@ -1,11 +1,11 @@
 <template>
-  <div class="p-login bgc1">
+  <div class="p-login">
     <CLogo />
-    <p class="pb-tip c4 fs27">
+    <p class="pb-tip c4 fs24">
       您暂未获取微信授权，将无法正常使用小程序的功能。如需要正常使用，请点击“授权登录”按钮，打开头像，昵称等信息的授权。
     </p>
     <button
-      class="c-button c-button--1 bgc3 c1 fs32"
+      class="pb-login-button c-button c-button--1 bgc3 c1 fs34"
       open-type="getUserInfo"
       @getuserinfo="handleGetUserInfo">
       授权登录

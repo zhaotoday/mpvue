@@ -8,10 +8,13 @@ $cdn-version: 0.1;
 $font-sizes: (
   fs10: 10px,
   fs20: 20px,
+  fs24: 24px,
   fs27: 27px,
   fs30: 30px,
   fs32: 32px,
+  fs34: 34px,
   fs36: 36px,
+  fs42: 42px,
   fs44: 44px
 );
 
@@ -20,7 +23,8 @@ $colors: (
   c1: #fff,
   c2: #000,
   c3: #39bab8,
-  c4: #999999
+  c4: #999999,
+  c5: #F5F5F5
 );
 
 // z-index

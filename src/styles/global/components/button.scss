@@ -1,12 +1,11 @@
 @include c(button) {
-  display: inline-block;
   text-align: center;
 
   @include m(1) {
-    @include text--middle(px2rpx(80px));
+    @include text--middle(px2rpx(88px));
 
-    width: px2rpx(600px);
-    border-radius: px2rpx(80px);
+    width: px2rpx(640px);
+    border-radius: px2rpx(8px);
 
     &::after {
       border: none;

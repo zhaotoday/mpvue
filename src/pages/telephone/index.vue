@@ -116,6 +116,8 @@ export default {
         }
       })
 
+      this.$wx.showToast({ title: '绑定成功' })
+
       this.$wx.navigateTo({
         url: ''
       })

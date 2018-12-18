@@ -10,4 +10,8 @@
       margin-bottom: px2rpx(30px);
     }
   }
+
+  @include e(title) {
+    line-height: 100%;
+  }
 }

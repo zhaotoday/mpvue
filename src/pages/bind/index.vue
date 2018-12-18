@@ -1,5 +1,5 @@
 <template>
-  <scroll-view class="p-telephone">
+  <scroll-view class="p-bind">
     <CLogo />
     <p class="pb-tip c4 fs24">请绑定手机号，以便为您提供更好的服务。</p>
     <div class="pb-telephone-input c-input">

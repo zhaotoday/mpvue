@@ -1,20 +1,20 @@
 module.exports = [
   {
-    path: 'pages/my/index',
+    path: 'pages/login/index',
     config: {
-      navigationBarTitleText: '会员中心'
+      navigationBarTitleText: '授权登录'
     }
   },
   {
-    path: 'pages/telephone/index',
+    path: 'pages/bind/index',
     config: {
       navigationBarTitleText: '绑定手机号'
     }
   },
   {
-    path: 'pages/login/index',
+    path: 'pages/my/index',
     config: {
-      navigationBarTitleText: '授权登录'
+      navigationBarTitleText: '会员中心'
     }
   },
   {

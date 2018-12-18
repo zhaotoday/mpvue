@@ -20,6 +20,10 @@
     left: px2rpx(15px);
   }
 
+  @include e(label, value) {
+    line-height: 100%;
+  }
+
   @include e(label) {
     left: px2rpx(75px);
     color: rgba(map-get($colors, c8), .5);

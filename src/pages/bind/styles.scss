@@ -1,12 +1,13 @@
 @import '../../styles/utils/index';
 
-@include p(telephone) {
+@include p(bind) {
   @include pb(tip) {
     @include block--center;
 
     text-align: center;
     padding-bottom: px2rpx(40px);
     width: px2rpx(640px);
+    line-height: 100%;
   }
 
   @include pb(telephone-input, check-code-input) {

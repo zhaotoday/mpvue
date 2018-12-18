@@ -17,7 +17,7 @@
     "mpvue": "^1.0.18",
     "sass-utils": "^1.0.20",
     "vuex": "^3.0.1",
-    "wx-bridge": "0.0.8"
+    "wx-bridge": "0.0.9"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

@@ -1,0 +1,10 @@
+@include c(cell) {
+  @include e(item) {
+    @include text--middle(px2rpx(88px));
+    @extend %border-1px;
+
+    &::after {
+      border-bottom: 1px solid rgba(map-get($colors, c1), .3);
+    }
+  }
+}

@@ -1,4 +1,33 @@
 @import "../../styles/utils/index";
 
 @include p(my) {
+  @include position--absolute(0, 0, 0, 0);
+
+  background-color: map-get($colors, c1);
+
+  @include pb(wrap) {
+    padding-top: px2rpx(30px);
+    background-color: map-get($colors, c3);
+  }
+
+  @include pb(avatar) {
+    @include circle(px2rpx(128px));
+    @include block--center;
+
+    display: block;
+    border: px2rpx(4px) solid map-get($colors, c1);
+  }
+
+  @include pb(nickname) {
+    @include padding(px2rpx(30px), null, px2rpx(30px));
+
+    text-align: center;
+    line-height: 100%;
+  }
+
+  @include pb(cell) {
+    @include block--center;
+
+    width: px2rpx(600px);
+  }
 }

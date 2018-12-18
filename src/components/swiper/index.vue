@@ -9,7 +9,7 @@
       <swiper-item
         v-for="(item, index) in items"
         :key="index">
-        <image
+        <img
           class="c-swiper__image"
           mode="aspectFill"
           :src="item" />

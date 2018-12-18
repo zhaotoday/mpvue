@@ -1,5 +1,11 @@
 module.exports = [
   {
+    path: 'pages/my/index',
+    config: {
+      navigationBarTitleText: '会员中心'
+    }
+  },
+  {
     path: 'pages/telephone/index',
     config: {
       navigationBarTitleText: '绑定手机号'
@@ -15,12 +21,6 @@ module.exports = [
     path: 'pages/home/index',
     config: {
       navigationBarTitleText: '首页'
-    }
-  },
-  {
-    path: 'pages/my/index',
-    config: {
-      navigationBarTitleText: '会员中心'
     }
   },
   {

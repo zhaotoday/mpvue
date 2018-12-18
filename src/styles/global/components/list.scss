@@ -1,4 +1,4 @@
-@include c(cell) {
+@include c(list) {
   @include e(item) {
     @include text--middle(px2rpx(88px));
     @extend %border-1px;
@@ -6,35 +6,22 @@
     position: relative;
 
     &::after {
-      border-bottom: 1px solid rgba(map-get($colors, c1), .3);
+      border-bottom: 1px solid map-get($colors, c7);
     }
   }
 
-  @include e(icon) {
-    @include position--absolute(50%, null, null, px2rpx(15px));
+  @include e(item-title, item-addon) {
+    @include position--absolute(50%);
 
     transform: translateY(-50%);
+    line-height: 100%;
   }
 
-  @include e(label) {
-    @include position--absolute(50%, null, null, px2rpx(75px));
-
-    transform: translateY(-50%);
-    color: rgba(map-get($colors, c8), .5);
+  @include e(item-title) {
+    left: 0;
   }
 
-  @include e(value) {
-    @include position--absolute(50%, px2rpx(15px));
-
-    color: map-get($colors, c8);
-    text-align: right;
-    transform: translateY(-50%);
-  }
-
-  @include e(addon-icon) {
-    @include position--absolute(50%, 0);
-    @include size(px2rpx(40px), px2rpx(40px));
-
-    transform: translateY(-50%);
+  @include e(item-addon) {
+    right: px2rpx(20px);
   }
 }

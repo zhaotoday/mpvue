@@ -40,6 +40,26 @@
           {{ item.label }}
         </div>
       </div>
+      <div class="c-tabs__content">
+        <ul class="c-list">
+          <li class="c-list__item">
+            <div class="c-list__item-title c2 fs30">您推荐了 15 个好友，获得 100 积分</div>
+            <div class="c-list__item-addon c4 fs24">2018-12-20</div>
+          </li>
+          <li class="c-list__item">
+            <div class="c-list__item-title c2 fs30">您推荐了 15 个好友，获得 100 积分</div>
+            <div class="c-list__item-addon c4 fs24">2018-12-20</div>
+          </li>
+          <li class="c-list__item">
+            <div class="c-list__item-title c2 fs30">您推荐了 15 个好友，获得 100 积分</div>
+            <div class="c-list__item-addon c4 fs24">2018-12-20</div>
+          </li>
+          <li class="c-list__item">
+            <div class="c-list__item-title c2 fs30">您推荐了 15 个好友，获得 100 积分</div>
+            <div class="c-list__item-addon c4 fs24">2018-12-20</div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>

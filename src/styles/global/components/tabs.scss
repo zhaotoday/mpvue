@@ -28,10 +28,6 @@
   }
 
   @include e(content) {
-    @include size(100%, px2rem(428px));
-
-    overflow-x: hidden;
-    overflow-y: scroll;
-    background-color: map-get($colors, c4);
+    @include margin(px2rpx(10px), null, null, px2rpx(20px));
   }
 }

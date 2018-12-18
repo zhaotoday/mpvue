@@ -7,7 +7,6 @@ export default class extends REST {
     super()
 
     this.baseURL = consts.API_URL
-    this.version = consts.API_VERSION
     this.headers = restHelpers.getHeaders()
     this.path = 'points'
   }

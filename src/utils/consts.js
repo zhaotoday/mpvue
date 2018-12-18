@@ -1,5 +1,7 @@
-const API_URL = 'http://localhost:3002/apis'
-const API_VERSION = 'v1'
+// 接口地址
+const API_URL = 'http://localhost:3002/api/v1/wxUsers'
+
+// 登录页
 const LOGIN_PAGE = '/pages/login/index'
 
 // 积分类型
@@ -15,7 +17,6 @@ const POINT_TYPES = [
 ]
 export default {
   API_URL,
-  API_VERSION,
   LOGIN_PAGE,
   POINT_TYPES
 }

@@ -24,9 +24,9 @@ module.exports = [
     }
   },
   {
-    path: 'pages/share/index',
+    path: 'pages/bus/index',
     config: {
-      navigationBarTitleText: '分享'
+      navigationBarTitleText: '免费班车'
     }
   }
 ]

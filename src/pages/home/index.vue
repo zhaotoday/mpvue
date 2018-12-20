@@ -11,10 +11,21 @@
       @click="handleMakePhoneCall">
       400-918-9833
     </div>
-    <div
-      class="c-button c-button--1"
-      @click="handleOpenLocation">
-      位置导航
+    <div class="o-grid">
+      <div class="o-grid__cell">
+        <div
+          class="c-button c-button--1 bgc3 c1 fs32"
+          @click="handleOpenLocation">
+          位置导航
+        </div>
+      </div>
+      <div class="o-grid__cell">
+        <div
+          class="c-button c-button--1 bgc3 c1 fs32"
+          @click="navigateTo('/pages/bus/index')">
+          免费班车
+        </div>
+      </div>
     </div>
 
     <div class="pb-point-guide">积分规则</div>

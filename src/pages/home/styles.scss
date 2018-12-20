@@ -1,6 +1,10 @@
 @import "../../styles/utils/index";
 
 @include p(home) {
+  @include pb(video) {
+    width: 100%;
+  }
+
   @include pb(intro) {
   }
 

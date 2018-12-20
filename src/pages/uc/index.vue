@@ -1,5 +1,5 @@
 <template>
-  <div class="p-my">
+  <div class="p-uc">
     <div class="pb-wrap">
       <img
         class="pb-avatar"

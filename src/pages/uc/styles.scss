@@ -1,6 +1,6 @@
 @import "../../styles/utils/index";
 
-@include p(my) {
+@include p(uc) {
   @include position--absolute(0, 0, 0, 0);
 
   background-color: map-get($colors, c1);

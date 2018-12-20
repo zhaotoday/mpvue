@@ -35,4 +35,10 @@
 
     background-image: cdn("components/icon/point.png");
   }
+
+  @include m(close) {
+    @include size(px2rpx(40px), px2rpx(40px));
+
+    background-color: black;
+  }
 }

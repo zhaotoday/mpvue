@@ -16,6 +16,7 @@ $font-sizes: (
   fs32: 32px,
   fs34: 34px,
   fs36: 36px,
+  fs40: 40px,
   fs42: 42px,
   fs44: 44px
 );
@@ -30,10 +31,12 @@ $colors: (
   c6: #CCCCCC,
   c7: #DDDDDD,
   c8: #ffffff,
-  c9: #FBA319
+  c9: #FBA319,
+  c10: #666666
 );
 
 // z-index
 $z-indexes: (
-  c-overlay: 5
+  c-overlay: 5,
+  c-popup: 6
 );

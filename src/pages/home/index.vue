@@ -30,30 +30,28 @@
 
     <div class="pb-point-guide">积分规则</div>
     <CToolBar />
-    <CPopup
-      :visible="cPopup.visible"
-      @close="cPopup.visible = false">
-      <div slot="content">abc</div>
-    </CPopup>
+    <CSharePopup
+      :visible="cSharePopup.visible"
+      @close="cSharePopup.visible = false" />
   </div>
 </template>
 
 <script>
 import CToolBar from '@/components/tool-bar'
-import CPopup from '@/components/popup'
+import CSharePopup from '@/components/popups/share'
 
 export default {
   components: {
     CToolBar,
-    CPopup
+    CSharePopup
   },
   data () {
     return {
       cVideo: {
         autoplay: true
       },
-      cPopup: {
-        visible: false
+      cSharePopup: {
+        visible: true
       }
     }
   },

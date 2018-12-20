@@ -21,6 +21,16 @@ export default {
   components: {
     CLogo
   },
+  onLoad () {
+    /*
+    wx.openLocation({
+      latitude: 22.5542080000,
+      longitude: 113.8878770000,
+      name: '宝安中心A地铁口',
+      address: '宝安中心A地铁口'
+    })
+    */
+  },
   methods: {
     async handleGetUserInfo (e) {
       const { iv, encryptedData } = e.mp.detail

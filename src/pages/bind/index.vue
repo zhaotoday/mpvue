@@ -29,6 +29,7 @@
     </div>
     <button
       class="c-button c-button--1 bgc3 c1 fs32"
+      style="width: 640rpx;"
       @click="handleConfirm">
       确定
     </button>

@@ -14,7 +14,7 @@ export default new Vuex.Store({
   actions,
   mutations,
   modules: {
-    wxUsers,
+    'public/wxUsers': wxUsers,
     points
   }
 })

@@ -1,5 +1,11 @@
 module.exports = [
   {
+    path: 'pages/bind/index',
+    config: {
+      navigationBarTitleText: '绑定手机号'
+    }
+  },
+  {
     path: 'pages/uc/index',
     config: {
       navigationBarTitleText: '重阳会员'
@@ -15,12 +21,6 @@ module.exports = [
     path: 'pages/login/index',
     config: {
       navigationBarTitleText: '授权登录'
-    }
-  },
-  {
-    path: 'pages/bind/index',
-    config: {
-      navigationBarTitleText: '绑定手机号'
     }
   },
   {

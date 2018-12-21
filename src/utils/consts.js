@@ -1,5 +1,5 @@
 // 接口地址
-const API_URL = 'http://localhost:3002/api/v1/wxUsers'
+const API_URL = 'http://localhost:3002/api/v1'
 
 // 登录页
 const LOGIN_PAGE = '/pages/login/index'

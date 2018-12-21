@@ -3,8 +3,6 @@ import Vuex from 'vuex'
 import getters from './getters'
 import actions from './actions'
 import mutations from './mutations'
-import wxUsers from './modules/wxUsers'
-import points from './modules/points'
 
 Vue.use(Vuex)
 
@@ -14,7 +12,8 @@ export default new Vuex.Store({
   actions,
   mutations,
   modules: {
-    'public/wxUsers': wxUsers,
-    points
+    'public/wxUsers': require('./modules/public/wxUsers').default,
+    'wx/wxUsers': require('./modules/wx/wxUsers').default,
+    'wx/points': require('./modules/wx/points').default
   }
 })

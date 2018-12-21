@@ -56,7 +56,7 @@ export default {
   },
   methods: {
     getCheckCode (telephone) {
-      return this.$store.dispatch('public/wxUsers/postAction', {
+      return this.$store.dispatch('wx/wxUsers/postAction', {
         body: {
           type: 'GET_CHECK_CODE',
           telephone
@@ -120,7 +120,7 @@ export default {
         return
       }
 
-      await this.$store.dispatch('wxUsers/postAction', {
+      await this.$store.dispatch('wx/wxUsers/postAction', {
         body: {
           type: 'BIND_TELEPHONE',
           telephone,

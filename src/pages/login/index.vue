@@ -42,7 +42,7 @@ export default {
       if (!getSettingRes.authSetting['scope.userInfo']) {
         this.$wx.showToast({ title: '您需要授权登录才能进行下一步操作' })
       } else {
-        const wxUsersPostActionRes = await this.$store.dispatch('wxUsers/postAction', {
+        const wxUsersPostActionRes = await this.$store.dispatch('public/wxUsers/postAction', {
           body: {
             type: 'LOGIN',
             code: loginRes.code,

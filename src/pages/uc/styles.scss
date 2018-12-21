@@ -38,7 +38,11 @@
     width: px2rpx(600px);
   }
 
-  @include pb(tabs) {
+  @include pb(point-tabs) {
     padding-top: px2rpx(50px);
+
+    @include e(no-data) {
+      background-color: red;
+    }
   }
 }

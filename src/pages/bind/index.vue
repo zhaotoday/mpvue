@@ -80,8 +80,10 @@ export default {
 
       await this.getCheckCode(telephone)
 
+      this.$wx.showToast({ title: '验证码获取成功' })
+
       let i = 0
-      let leftSeconds = 60
+      let leftSeconds = 120
 
       this.cCheckCode.disabled = true
       this.cCheckCode.message = `${leftSeconds} 秒后重新获取`

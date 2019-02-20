@@ -1,12 +1,3 @@
-## 链接
-
-- [mpVue](http://mpvue.com)
-- [awesome-mpvue](https://github.com/mpvue/awesome-mpvue)
-- [Flyio](https://wendux.github.io/dist/#/doc/flyio/readme)
-- [mpvue-entry](https://github.com/F-loat/mpvue-entry)
-- [mpvue中无缝接入Vant Weapp组件库](https://github.com/Rychou/mpvue-vant)
-- [mini-program](https://github.com/zhaotoday/mini-program)
-
 ## 命令
 
 ``` bash
@@ -63,8 +54,8 @@ module.exports = {
 {
   "pages": [
     {
-      "path": "pages/news/list", // 页面路径，同时是 vue 文件相对于 src 的路径，必填
-      "config": { // 页面配置，即 page.json 的内容，可选
+      "path": "pages/news/list",
+      "config": {
         "navigationBarTitleText": "文章列表",
         "enablePullDownRefresh": true
       }
@@ -83,6 +74,12 @@ $ npm install --save node-sass sass-loader
 
 ## 参考
 
+- [mpVue](http://mpvue.com)
+- [awesome-mpvue](https://github.com/mpvue/awesome-mpvue)
+- [Flyio](https://wendux.github.io/dist/#/doc/flyio/readme)
+- [mpvue-entry](https://github.com/F-loat/mpvue-entry)
+- [mpvue中无缝接入Vant Weapp组件库](https://github.com/Rychou/mpvue-vant)
+- [mini-program](https://github.com/zhaotoday/mini-program)
 - [为什么有些组件名不可以使用](http://mpvue.com/qa/#_3)；
 - mpVue 暂时不支持 wxs；
 - [unionId 和 openId 的区别](https://mp.weixin.qq.com/s?__biz=NzA3OTQ2OTgw&mid=204189507&idx=1&sn=58fd3df3a8323f6b7bfb2680f222c293)

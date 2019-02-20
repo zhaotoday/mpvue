@@ -1,13 +1,13 @@
 {
 	"description": "项目配置文件。",
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": false,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true
 	},
-	"miniprogramRoot": "dist/",
+	"miniprogramRoot": "dist/wx/",
 	"compileType": "miniprogram",
 	"appid": "wx6aa3e8308736f4f4",
 	"projectname": "my-project",

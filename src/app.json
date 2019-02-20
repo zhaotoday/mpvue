@@ -1,4 +1,11 @@
 {
+  "pages": [
+    "pages/bind/index",
+    "pages/login/index",
+    "pages/uc/index",
+    "pages/home/index",
+    "pages/bus/index"
+  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#39BAB8",

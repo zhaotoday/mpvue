@@ -13,6 +13,7 @@ export default new Vuex.Store({
   mutations,
   modules: {
     'public/wxUsers': require('./modules/public/wx-users').default,
+    'public/ads': require('./modules/public/ads').default,
     'public/categories': require('./modules/public/categories').default,
     'public/helpers': require('./modules/public/helpers').default,
     'public/products': require('./modules/public/products').default,

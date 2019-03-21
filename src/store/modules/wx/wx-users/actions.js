@@ -1,5 +1,5 @@
 import types from './types'
-import Model from '@/models/wx/wxUsers'
+import Model from '@/models/wx/wx-users'
 
 export default {
   async getList ({ commit }, { query }) {

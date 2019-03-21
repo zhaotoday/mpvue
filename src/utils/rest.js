@@ -2,6 +2,7 @@ import REST from 'jt-rest'
 import consts from './consts'
 import restHelpers from './helpers/rest-helpers'
 import wxb from './wxb'
+import auth from './auth'
 
 export default class extends REST {
   /**
@@ -11,6 +12,17 @@ export default class extends REST {
   request (method = 'GET', options = {}) {
     if (!options.query) {
       options.query = {}
+    }
+
+    if (!options.body) {
+      options.body = {}
+    }
+
+    if (auth.loggedIn()) {
+      const userId = auth.get()['user']['id']
+
+      options.query.wxUserId = userId
+      options.body.wxUserId = userId
     }
 
     // 转 options.query.where 对象为字符串
